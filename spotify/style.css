@@ -1,0 +1,106 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+ul{
+    height: 40px;
+    list-style: none;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+#Brand{
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+
+#logo a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+ul li a{
+    margin: 0px 5px;
+    padding: 10px;
+}
+.interface{
+    background-color: blanchedalmond;
+    /* height: 80vh; */
+}
+.container{
+    display: flex;
+
+}
+.row{
+    margin: 15px auto;
+    display: flex;
+    width: 75%;
+    color: white;
+    background: url('img/bg.jpg') center center/cover;
+}
+/* .col1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.col1{
+    padding: 20px;
+}
+.col1 h2{
+    margin-bottom: 50px;
+}
+.row div{
+    width: 90%
+}
+.songitem{
+    margin: 5px 0px;
+    display: flex;
+    background-color: white;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding:3px 12px;
+}
+.songimg img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.songimg{
+    display: flex;
+    align-items: center;
+}
+/* #footer */
+#footer{
+    background-color: black;
+}
+#footer-row{
+    margin: auto;
+    width: 80%;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#seekbar{
+    width: 100%;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+#seekbar,i:hover{
+    cursor: pointer;
+}
+
