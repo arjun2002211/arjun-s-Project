@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .delete {
+            color: white;
+            background-color: red;
+            padding: 7px 10px;
+            border: none;
+            border-radius: 7px;
+            margin: 5px 20px;
+        }
+
+        input {
+            padding: 10px;
+            background-color: white;
+        }
+
+        #task {
+            padding: 10px;
+            color: white;
+            background: black;
+        }
+
+        li {
+            width: 30%;
+            padding-left: 15px;
+        }
+
+        li:nth-child(odd) {
+            background-color: orange;
+        }
+
+        li:nth-child(even) {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        TODO App
+    </h1>
+    <div class="container">
+        <input type="text" name="" id="" placeholder="Enter Your Task"> <button class="btn" id="task">Add Task</button>
+    </div>
+    <ul>
+
+
+    </ul>
+
+
+    <script>
+        let div = document.querySelector('div');
+        let input = document.querySelector('input');
+        let btn = document.querySelector("button");
+        let ul = document.querySelector("ul");
+
+        btn.addEventListener('click', () => {
+            let li = document.createElement('li');
+            if (input.value != "") {
+                li.innerText = input.value;
+                ul.appendChild(li);
+                let deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+                deleteButton.classList.add("delete");
+                li.appendChild(deleteButton);
+            }
+        });
+
+        let deleteClass = document.querySelectorAll('.delete');
+
+        ul.addEventListener('click', (e) => {
+            if (e.target.nodeName == "BUTTON") {
+                let item = e.target.parentElement;
+                item.remove();
+            }
+        })
+
+    </script>
+</body>
+
+</html>
